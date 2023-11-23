@@ -1,0 +1,69 @@
+.main {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.main > div {
+	display: flex;
+	flex-direction: column;
+	width: max(60vw, 32ch);
+	height: 100vh;
+}
+
+.main header {
+	height: 4em;
+	justify-content: space-between;
+	border-radius: 0 0 .5em .5em;
+}
+
+.main :is(header, footer) {
+	display: flex;
+	background-color: #333;
+	box-shadow: 0 0 2vh 1vh #0004;
+	padding: 0 1em;
+	align-items: center;
+}
+
+.main nav {
+	display: flex;
+	gap: 2rem;
+}
+
+.main nav a::after {
+	content: '·';
+}
+.main nav a::before {
+	content: '·';
+}
+
+.main header a {
+	transition: filter 250ms;
+	font-size: large;
+	font-family: 'Source Code Pro', monospace;
+}
+.main header a:is(:hover, :focus-visible) {
+	filter: drop-shadow(0 0 1rem #FFF);
+}
+
+.main main {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main main > div {
+	width: max(50vw, 32ch);
+	align-self: center;
+}
+
+.main footer {
+	justify-content: center;
+	height: 4em;
+	border-radius: .5em .5em 0 0;
+}
+
+.main .home {
+	font-size: x-large;
+}
