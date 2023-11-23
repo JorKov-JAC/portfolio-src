@@ -7,7 +7,7 @@
 .main > div {
 	display: flex;
 	flex-direction: column;
-	width: max(60vw, 32ch);
+	width: max(60vw, 40ch);
 	height: 100vh;
 }
 
@@ -54,8 +54,10 @@
 }
 
 .main main > div {
-	width: max(50vw, 32ch);
+	width: max(50vw, 40ch);
+	flex-grow: 1;
 	align-self: center;
+	height: 100%;
 }
 
 .main footer {
