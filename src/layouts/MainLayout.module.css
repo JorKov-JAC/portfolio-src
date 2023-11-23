@@ -38,12 +38,27 @@
 }
 
 .main header a {
-	transition: filter 250ms;
+	transition: filter 250ms, color 250ms, text-shadow 250ms;
 	font-size: large;
 	font-family: 'Source Code Pro', monospace;
+	animation: 4s ease 0s infinite alternate link-glow;
 }
 .main header a:is(:hover, :focus-visible) {
-	filter: drop-shadow(0 0 1rem #FFF);
+	filter: drop-shadow(0 0 1em #F0F);
+	text-shadow: 0 0 1em #F0F;
+	color: #F8F;
+	animation: unset;
+}
+
+@keyframes link-glow {
+	from {
+		text-shadow: 0 0 1em #F0F4;
+		color: #C8C;
+	}
+	to {
+		text-shadow: 0 0 1em #F0F;
+		color: #F8F;
+	}
 }
 
 .main main {
