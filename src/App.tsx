@@ -1,7 +1,7 @@
 import { Route, Router, Routes } from '@solidjs/router'
 import Home from './pages/Home'
-import Missing from './pages/missing'
 import MainLayout from './layouts/MainLayout'
+import { lazy } from 'solid-js'
 
 export default function App() {
 	const originalPathname = window.location.pathname
@@ -15,7 +15,8 @@ export default function App() {
 		<MainLayout>
 			<Routes base={import.meta.env?.DEV ? "/" : originalPathname}>
 				<Route path={"/"} component={Home}/>
-				<Route path={"/*"} component={Missing}/>
+				<Route path={"/about"} component={lazy(() => import("./pages/About"))}/>
+				<Route path={"/*"} component={lazy(() => import("./pages/Missing"))}/>
 			</Routes>
 		</MainLayout>
 	</Router>
