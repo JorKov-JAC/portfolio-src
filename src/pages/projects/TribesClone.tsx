@@ -13,7 +13,7 @@ export default function UiFps() {
 			<li>X — Toggle Freecam</li>
 			<li>Shift (while in Freecam) — Move Fast</li>
 		</ul>
-		<iframe src="/__/projects/tribesClone/index.html" onLoad={({target: e}) => { e.style.height = e.contentWindow.document.body.scrollHeight+"px"}}></iframe>
+		<iframe src="/__/projects/tribesClone/index.html" onLoad={({target: e}) => { e.style.height = e.contentWindow.document.body.scrollHeight+"px"; e.style.width = "auto"}}></iframe>
 		<h2>Context</h2>
 		<p>TODO</p>
 		{/* <p>In my second semester of my computer science program, we were asked to create basic </p> */}
