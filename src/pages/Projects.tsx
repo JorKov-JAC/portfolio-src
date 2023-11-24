@@ -10,7 +10,8 @@ interface ProjectEntry {
 
 export default function Projects() {
 	const projects: ProjectEntry[] = [
-		{ name: "Tribes Clone", path: "tribes-clone", component: lazy(() => import("./projects/TribesClone")) }
+		{ name: "Tribes Clone", path: "tribes-clone", component: lazy(() => import("./projects/TribesClone")) },
+		{ name: "GPU Particles", path: "gpu-particles", component: lazy(() => import("./projects/GpuParticles")) }
 	]
 
 	const ProjectsList: VoidComponent = () => {

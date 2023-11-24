@@ -1,3 +1,4 @@
+import MaxSizeIframe from "../../components/MaxSizeIframe"
 import * as style from "./TribesClone.module.css"
 
 export default function UiFps() {
@@ -13,7 +14,8 @@ export default function UiFps() {
 			<li>X — Toggle Freecam</li>
 			<li>Shift (while in Freecam) — Move Fast</li>
 		</ul>
-		<iframe title="Game" src="/__/projects/tribesClone/index.html" onLoad={({target: e}) => { e.style.aspectRatio = e.scrollWidth / e.contentWindow.document.body.scrollHeight}}></iframe>
+		{/* <iframe title="Game" src="/__/projects/tribesClone/index.html" onLoad={({target: e}) => { e.style.aspectRatio = e.scrollWidth / e.contentWindow.document.body.scrollHeight}}></iframe> */}
+		<MaxSizeIframe title="Game" src="/__/projects/tribesClone/index.html"/>
 		<h2>Context</h2>
 		<p>TODO</p>
 		{/* <p>In my second semester of my computer science program, we were asked to create basic </p> */}
