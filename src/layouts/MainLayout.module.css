@@ -1,23 +1,17 @@
-.main {
+.style {
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 }
 
-.main > div {
+.style > div {
 	display: flex;
 	flex-direction: column;
-	width: max(60vw, 40ch);
+	width: min(100%, max(60vw, 40ch));
 	height: 100vh;
 }
 
-.main header {
-	height: 4em;
-	justify-content: space-between;
-	border-radius: 0 0 .5em .5em;
-}
-
-.main :is(header, footer) {
+.style :is(header, footer) {
 	display: flex;
 	background-color: #333;
 	box-shadow: 0 0 2vh 1vh #0004;
@@ -25,29 +19,62 @@
 	align-items: center;
 }
 
-.main nav {
+.style header {
+	height: 4em;
+	justify-content: space-between;
+	border-radius: 0 0 .5em .5em;
+}
+
+.style header img {
+	height: 2em;
+}
+
+.squareIcon {
 	display: flex;
-	gap: 2rem;
+	justify-content: center;
+	width: 2em;
+	height: 2em;
+}
+.squareIcon>img {
+	height: 2em;
 }
 
-.main nav a::after {
+.style nav {
+	display: flex;
+	gap: min(2em, 3vw);
+	align-items: center;
+}
+
+.iconLinks {
+	display: flex;
+	gap: min(1em, 2vw);
+	align-items: center;
+}
+
+.style nav>a::after {
 	content: '·';
 }
-.main nav a::before {
+.style nav>a::before {
 	content: '·';
 }
 
-.main header a {
+.style nav>div {
+	display: flex;
+	height: 2rem;
+}
+
+.style header a {
+	--max-color: #F8F;
+	--max-shadow: #F0F;
 	transition: filter 250ms, color 250ms, text-shadow 250ms;
 	font-size: large;
 	font-family: 'Source Code Pro', monospace;
 	animation: 4s ease 0s infinite alternate link-glow;
 }
-.main header a:is(:hover, :focus-visible) {
-	filter: drop-shadow(0 0 1em #F0F);
-	text-shadow: 0 0 1em #F0F;
-	color: #F8F;
-	animation: unset;
+.style header a:is(:hover, :focus-visible) {
+	filter: drop-shadow(0 0 1em var(--max-shadow)) !important;
+	text-shadow: 0 0 1em var(--max-shadow) !important;
+	color: var(--max-color) !important;
 }
 
 @keyframes link-glow {
@@ -61,26 +88,57 @@
 	}
 }
 
-.main main {
+.style header :global(.active) {
+	--max-color: #88F;
+	--max-shadow: #80F;
+	animation: unset;
+	text-shadow: 0 0 1em #80F;
+	color: #88F;
+}
+
+.style main {
 	flex-grow: 1;
 
 	display: flex;
 	flex-direction: column;
 }
 
-.main main > div {
-	width: max(50vw, 40ch);
+.style main > div {
+	width: min(100%, max(50vw, 40ch));
 	flex-grow: 1;
 	align-self: center;
 	height: 100%;
 }
 
-.main footer {
-	justify-content: center;
+.style footer {
+	justify-content: space-between;
 	height: 4em;
 	border-radius: .5em .5em 0 0;
 }
 
-.main .home {
+.style footer img {
+	height: 2em;
+}
+
+.style footer>div {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.style footer p {
+	margin: 0;
+}
+
+.style .home {
 	font-size: x-large;
+}
+
+.email::before {
+	content: '✉ ';
+}
+
+.phone::before {
+	content: '☎ ';
 }
