@@ -73,3 +73,7 @@ code {
 	border-radius: .25em;
 	font-family: 'Source Code Pro', monospace;
 }
+
+iframe {
+	border: none;
+}

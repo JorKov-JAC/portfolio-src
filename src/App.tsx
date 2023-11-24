@@ -15,6 +15,8 @@ export default function App() {
 		<MainLayout>
 			<Routes base={import.meta.env?.DEV ? "/" : originalPathname}>
 				<Route path={"/"} component={Home}/>
+				{/* <Route path={"/projects"} component={lazy(() => import("./pages/Projects"))}/> */}
+				<Route path={"/projects/*"} component={lazy(() => import("./pages/Projects"))}/>
 				<Route path={"/about"} component={lazy(() => import("./pages/About"))}/>
 				<Route path={"/cv"} component={lazy(() => import("./pages/Cv"))}/>
 				<Route path={"/*"} component={lazy(() => import("./pages/Missing"))}/>

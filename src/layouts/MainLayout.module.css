@@ -21,6 +21,7 @@
 
 .style header {
 	height: 4em;
+	min-height: 4em;
 	justify-content: space-between;
 	border-radius: 0 0 .5em .5em;
 }
@@ -91,9 +92,8 @@
 .style header :global(.active) {
 	--max-color: #88F;
 	--max-shadow: #80F;
-	animation: unset;
-	text-shadow: 0 0 1em #80F;
-	color: #88F;
+	text-shadow: 0 0 1em #80F !important;
+	color: #88F !important;
 }
 
 .style main {
@@ -113,6 +113,7 @@
 .style footer {
 	justify-content: space-between;
 	height: 4em;
+	min-height: 4em;
 	border-radius: .5em .5em 0 0;
 }
 

@@ -9,6 +9,7 @@ const MainLayout: ParentComponent = (p) => {
 			<header>
 				<A href="" class={style.home} end>Jordan Kovacs</A>
 				<nav>
+					<A href="projects">Projects</A>
 					<A href="about">About Me</A>
 					<A href="cv">CV</A>
 					<div class={style.iconLinks}>

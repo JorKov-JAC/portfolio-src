@@ -1,7 +1,7 @@
-import * as style from "./Cv.module.css"
+import * as style from "/src/styles/fullpageIframe.module.css"
 
 export default function Cv() {
 	return <div class={style.style}>
-		<iframe src="/cvFrame.html"></iframe>
+		<iframe src="/__/cvFrame.html"></iframe>
 	</div>
 }
