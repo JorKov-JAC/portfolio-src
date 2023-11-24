@@ -1,5 +1,4 @@
 import { Component, VoidComponent, lazy } from "solid-js";
-import UiFps from "./projects/UiFps";
 import { A, Route, Routes } from "@solidjs/router";
 import Missing from "./Missing";
 
@@ -11,22 +10,17 @@ interface ProjectEntry {
 
 export default function Projects() {
 	const projects: ProjectEntry[] = [
-		{ name: "Jetpack & Ski Game (Tribes Clone)", path: "tribes-clone", component: lazy(() => import("./projects/UiFps")) }
+		{ name: "Tribes Clone", path: "tribes-clone", component: lazy(() => import("./projects/TribesClone")) }
 	]
-
-	// return <>
-	// 	<p>Foo</p>
-	// 	<Routes>
-	// 		<Route path="/spleen" component={() => <p>Speeeee</p>}></Route>
-	// 		<Route path="/projects/banana" component={() => <p>Banaan</p>}></Route>
-	// 	</Routes>
-	// </>
 
 	const ProjectsList: VoidComponent = () => {
 		return <>
-			{projects.map(p => {
-				return <A href={p.path}>{p.name}</A>
-			})}
+			<h1>Projects</h1>
+			<ul>
+				{projects.map(p => {
+					return <li><A href={p.path}>{p.name}</A></li>
+				})}
+			</ul>
 		</>
 	}
 
