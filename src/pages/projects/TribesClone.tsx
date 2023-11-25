@@ -1,8 +1,10 @@
 import MaxSizeIframe from "../../components/MaxSizeIframe"
-import * as style from "./TribesClone.module.css"
 
 export default function UiFps() {
-	return <div class={style.style}>
+	return <>
+		<p>For the final project of my second-semester UI course, we were tasked with creating tiny JavaScript games to add to WordPress sites. I ended up overdoing it and creating this Tribes-inspired movement game instead. There is no goal, just fly around!</p>
+		<p>Special thanks to Spencer Paradis for showing interest in my creation.</p>
+		<MaxSizeIframe title="Game" src="/__/projects/tribesClone/index.html"/>
 		<h2>Controls</h2>
 		<p>Click on the game to start playing!</p>
 		<ul>
@@ -14,10 +16,10 @@ export default function UiFps() {
 			<li>X — Toggle Freecam</li>
 			<li>Shift (while in Freecam) — Move Fast</li>
 		</ul>
-		{/* <iframe title="Game" src="/__/projects/tribesClone/index.html" onLoad={({target: e}) => { e.style.aspectRatio = e.scrollWidth / e.contentWindow.document.body.scrollHeight}}></iframe> */}
-		<MaxSizeIframe title="Game" src="/__/projects/tribesClone/index.html"/>
-		<h2>Context</h2>
-		<p>TODO</p>
-		{/* <p>In my second semester of my computer science program, we were asked to create basic </p> */}
-	</div>
+		<p>Skiing removes all of your friction. To gain speed, you need to jetpack up hills and ski down slopes, creating a cycle between Height -&gt; Downward speed -&gt; Horizontal speed -&gt; Upward speed.</p>
+		<div style={{display: "flex", "flex-direction": "column", "align-items": "center", margin: "1em"}}>
+			<img src="/tribes_movement.webp" style={{"max-width": "100%"}}/>
+			<p>Image from Tribes: Ascend</p>
+		</div>
+	</>
 }
