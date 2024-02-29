@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router"
 
+/** The home page. */
 export default function Home() {
 	return <>
 		<h1>Welcome to my Portfolio site!</h1>

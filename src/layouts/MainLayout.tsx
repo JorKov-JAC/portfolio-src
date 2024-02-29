@@ -3,6 +3,7 @@ import * as style from "./MainLayout.module.css"
 import { A } from "@solidjs/router"
 import ExternalA from "../components/ExternalA"
 
+/** Main layout which contains the content for each page. */
 const MainLayout: ParentComponent = (p) => {
 	return <div class={style.style}>
 		<div>
@@ -13,8 +14,8 @@ const MainLayout: ParentComponent = (p) => {
 					<A href="about">About Me</A>
 					<A href="cv">CV</A>
 					<div class={style.iconLinks}>
-						<ExternalA href="https://github.com/JorKov-JAC"><div class={style.squareIcon}><img src="/GitHub_Icon.svg" alt="GitHub"/></div></ExternalA>
-						<ExternalA href="https://www.linkedin.com/in/jordan-kovacs-5a2835297"><div class={style.squareIcon}><img src="/LinkedIn_Icon.svg" alt="LinkedIn"/></div></ExternalA>
+						<ExternalA href="https://github.com/JorKov-JAC"><div class={style.squareIcon}><img src="/__/GitHub_Icon.svg" alt="GitHub"/></div></ExternalA>
+						<ExternalA href="https://www.linkedin.com/in/jordan-kovacs-5a2835297"><div class={style.squareIcon}><img src="/__/LinkedIn_Icon.svg" alt="LinkedIn"/></div></ExternalA>
 					</div>
 				</nav>
 			</header>
