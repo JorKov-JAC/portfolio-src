@@ -1,11 +1,9 @@
 import { Component, VoidComponent, lazy, type JSXElement } from "solid-js";
 import { A, Route, Routes } from "@solidjs/router";
-import Missing from "./Missing";
 import ExternalA from "../components/ExternalA";
 
 /** Handles routing for projects. */
 export default function Projects() {
-
 	return <>
 		<Routes>
 			<Route path="/" component={ProjectsList}/>
@@ -13,7 +11,7 @@ export default function Projects() {
 			{projects.filter(hasRouteInfo).map(p => {
 				return <Route path={p.path} component={() => TitledEntryPage(p)}/>
 			})}
-			<Route path="/*" component={Missing}/>
+			<Route path="/*" component={lazy(() => import("./Missing"))}/>
 		</Routes>
 	</>
 }
