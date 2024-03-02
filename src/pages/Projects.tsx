@@ -58,6 +58,7 @@ function hasRouteInfo<T extends ProjectEntry>(p: T): p is T & ProjectEntryRouteI
 /** Information for every project. */
 const projects: ProjectEntry[] = [
 	{ name: "This Portfolio Website", repo: "https://github.com/JorKov-JAC/portfolio-src" },
+	{ name: "FarCraft", repo: "https://github.com/JorKov-JAC/farcraft", path: "farcraft", component: lazy(() => import("./projects/FarCraft")) },
 	{ name: "Tribes Jetpacking Clone", repo: "https://github.com/JorKov-JAC/tribes-movement-clone", path: "tribes-clone", component: lazy(() => import("./projects/TribesClone")) },
 	{ name: "GPU Particles", repo: "https://github.com/JorKov-JAC/webgl1-particles", path: "gpu-particles", component: lazy(() => import("./projects/GpuParticles")) },
 	{ name: "D&D Compendium App", repo: "https://github.com/JorKov-JAC/dnd-app", download: "https://github.com/JorKov-JAC/dnd-app/releases/latest/download/dnd_compendium.apk" }

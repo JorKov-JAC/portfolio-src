@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden; padding: 0; margin: 0; height: fit-content; display: flex">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FarCraft</title>
+	<script type="module" defer src="out/main.js"></script>
+</head>
+<body style="padding: 0; margin: 0; display: flex">
+	<canvas id="game" style="width: 100vw; aspect-ratio: 4/3"></canvas>
+	<script>
+		const c = document.getElementById("game")
+		c.width = document.body.scrollWidth
+		c.height = document.body.scrollHeight
+	</script>
+</body>
+</html>
